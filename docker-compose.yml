@@ -7,7 +7,7 @@ jenkins:
     - 8080:8080
     - 50000:50000
 
-mysql:
+redmine-mysql:
   restart: always
   image: slsay/docker-mysql:latest
   environment:
@@ -18,7 +18,7 @@ redmine:
   restart: always
   image: slsay/docker-redmine:latest
   links:
-    - mysql:mysql
+    - redmine-mysql:mysql
   volumes:
     - ~/srv/docker/redmine/redmine:/home/redmine
   ports:
