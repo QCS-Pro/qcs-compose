@@ -30,7 +30,7 @@ sonar-mysql:
     - MYSQL_PASSWORD=sonar
     
 sonar:
-  image: sonarqube:latest
+  image: slsay/docker-sonar:latest
   environment:
     - SONARQUBE_JDBC_USERNAME=sonar
     - SONARQUBE_JDBC_PASSWORD=sonar
