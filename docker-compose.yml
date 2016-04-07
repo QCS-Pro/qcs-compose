@@ -1,5 +1,4 @@
 jenkins:
-  restart: always
   image: slsay/docker-jenkins:latest
   volumes:
     - ~/srv/docker/jenkins/jenkins:/var/jenkins_home
@@ -8,14 +7,12 @@ jenkins:
     - 50000:50000
 
 redmine-mysql:
-  restart: always
   image: slsay/docker-mysql:latest
   environment:
     - MYSQL_ROOT_PASSWORD=admin
     - MYSQL_DATABASE=redmine
 
 redmine:
-  restart: always
   image: slsay/docker-redmine:latest
   links:
     - redmine-mysql:mysql
@@ -25,7 +22,6 @@ redmine:
     - 3000:3000
 
 sonar-mysql:
-  restart: always
   image: slsay/docker-mysql:latest
   environment:
     - MYSQL_ROOT_PASSWORD=admin
