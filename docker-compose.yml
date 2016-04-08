@@ -45,13 +45,3 @@ sonar:
   ports:
     - 9000:9000
     - 9092:9092
-  
-proxy:
-  restart: always
-  image: slsay/docker-proxy:latest
-  links:
-   - redmine:redmine
-   - jenkins:jenkins
-   - sonar:sonar
-  ports:
-    - "80:80"
