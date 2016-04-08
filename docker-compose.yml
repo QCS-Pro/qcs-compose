@@ -1,12 +1,3 @@
-jenkins:
-  restart: always
-  image: slsay/docker-jenkins:latest
-  volumes:
-    - ~/srv/docker/jenkins/jenkins:/var/jenkins_home
-  ports:
-    - 8080:8080
-    - 50000:50000
-
 redmine-mysql:
   restart: always
   image: slsay/docker-mysql:latest
@@ -45,3 +36,12 @@ sonar:
   ports:
     - 9000:9000
     - 9092:9092
+
+jenkins:
+  restart: always
+  image: slsay/docker-jenkins:latest
+  volumes:
+    - ~/srv/docker/jenkins/jenkins:/var/jenkins_home
+  ports:
+    - 8080:8080
+    - 50000:50000
