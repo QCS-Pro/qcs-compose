@@ -4,8 +4,8 @@ jenkins:
   volumes:
     - ~/srv/docker/jenkins/jenkins:/var/jenkins_home
   ports:
-    - 8080:8080
-    - 50000:50000
+    - 127.0.0.1:8080:8080
+    - 127.0.0.1:50000:50000
 
 redmine-mysql:
   restart: always
@@ -22,7 +22,7 @@ redmine:
   volumes:
     - ~/srv/docker/redmine/redmine/plugins:/usr/src/redmine/plugins
   ports:
-    - 3000:3000
+    - 127.0.0.1:3000:3000
 
 sonar-mysql:
   restart: always
@@ -43,8 +43,8 @@ sonar:
   links:
     - sonar-mysql:mysql
   ports:
-    - 9000:9000
-    - 9092:9092
+    - 127.0.0.1:9000:9000
+    - 127.0.0.1:9092:9092
   
 proxy:
   restart: always
