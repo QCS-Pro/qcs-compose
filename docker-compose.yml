@@ -11,7 +11,7 @@ redmine:
   links:
     - redmine-mysql:mysql
   volumes:
-    - ~/srv/docker/redmine/redmine/plugins:/usr/src/redmine/plugins
+    - /srv/docker/redmine/redmine/plugins:/usr/src/redmine/plugins
   ports:
     - 3000:3000
 
@@ -41,7 +41,7 @@ jenkins:
   restart: always
   image: slsay/docker-jenkins:latest
   volumes:
-    - ~/srv/docker/jenkins/jenkins:/var/jenkins_home
+    - /srv/docker/jenkins/jenkins:/var/jenkins_home
   ports:
     - 8080:8080
     - 50000:50000
