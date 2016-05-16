@@ -37,9 +37,17 @@ sonar:
     - 9000:9000
     - 9092:9092
 
+mongo:
+  restart: always
+  image: slsay/docker-mongodb:latest
+  ports:
+    - 27017:27017
+
 jenkins:
   restart: always
   image: slsay/docker-jenkins:latest
+  links:
+    - mongo:mongo
   volumes:
     - /srv/docker/jenkins/jenkins:/var/jenkins_home
   ports:
