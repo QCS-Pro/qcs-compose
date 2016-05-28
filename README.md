@@ -26,6 +26,7 @@ docker-compose up
 - redmine:http://MACHINE_VM_IP:3000/
 - sonarqube：http://MACHINE_VM_IP:9000/
 - jenkins：http://MACHINE_VM_IP:8080/
+
 注：查看MACHINE_VM_IP
 ```sh
 docker-machine ip
