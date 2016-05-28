@@ -11,7 +11,7 @@
 
 1.系统要求，CPU 2核以上，内存4G以上，硬盘50G以上。  
 2.确保主机上有Docker环境和Docker Compose， 具体参考官网。  
-3.安装前请确认安装主机上有下面两个路径并有写权限。根据需要可以修改路径。  
+3.创建镜像路径。  
 ```sh		
 sudo mkdir -p /srv/docker/jenkins/jenkins
 sudo chmod 777 /srv/docker/jenkins/jenkins
